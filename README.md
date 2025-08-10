@@ -1,8 +1,8 @@
 # PathFinder Visualizer (React Version)
 
-A pathfinding algorithm visualizer built with React. You can watch different algorithms find the shortest path between two points on a grid.
+An interactive pathfinding algorithm visualizer I built using React and Vite. It lets you explore how different algorithms find the shortest path between two points on a grid, with smooth animations and customizable settings.
 
-## What it does
+## Features
 
 - Visualizes 6 different pathfinding algorithms
 - Interactive grid where you can draw walls and move start/end points
@@ -19,10 +19,10 @@ A pathfinding algorithm visualizer built with React. You can watch different alg
 - **Greedy** - fast but not always optimal
 - **Bi-Directional BFS** - searches from both ends
 
-## How to run
+## How to run locally
 
 ```bash
-cd Path_Visualizer
+cd pathfinding-visualizer
 npm install
 npm run dev
 ```
@@ -46,4 +46,4 @@ Open http://localhost:3000 in your browser.
 
 ## Author
 
-Harsh Bhanushali
+Mohd Kaif
