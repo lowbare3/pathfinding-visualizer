@@ -1,0 +1,104 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Global styles for the app */
+.app * {
+  box-sizing: border-box;
+}
+
+/* Prevent text selection during interactions */
+.app {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Smooth scrolling */
+.app {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.app button:focus,
+.app .dropdown-item:focus {
+  outline: 2px solid var(--primary-clr);
+  outline-offset: 2px;
+}
+
+/* Loading state */
+.app.loading {
+  cursor: wait;
+}
+
+.app.loading * {
+  pointer-events: none;
+}
+
+/* Animation states */
+.app.animating .board-cell {
+  pointer-events: none;
+}
+
+/* Responsive container */
+@media (max-width: 768px) {
+  .app {
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile */
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .app {
+    --light-line: #000000;
+    --gray-300: #666666;
+    --primary-clr: #0000ff;
+    --success-clr: #008000;
+    --danger-clr: #ff0000;
+    --warning-clr: #ff8000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .app *,
+  .app *::before,
+  .app *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .app {
+    background: white;
+    color: black;
+  }
+  
+  .header,
+  .app-footer,
+  .tutorial-overlay {
+    display: none;
+  }
+  
+  .main-content {
+    height: auto;
+    overflow: visible;
+  }
+}
