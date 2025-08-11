@@ -1,4 +1,4 @@
-# PathFinder Visualizer (React Version)
+# PathFinder Visualizer (React + Vite)
 
 An interactive pathfinding algorithm visualizer I built using React and Vite. It lets you explore how different algorithms find the shortest path between two points on a grid, with smooth animations and customizable settings.
 
